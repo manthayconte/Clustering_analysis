@@ -3,24 +3,24 @@
     "path": "~/GitHub/countries_by_GNI_clustering/Clustering_GNI.R",
     "project_path": "Clustering_GNI.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "4235189418",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1670434637821.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "31,0",
-        "scrollLine": "0"
+        "cursorPosition": "23,0",
+        "scrollLine": "12"
     },
     "folds": "",
-    "lastKnownWriteTime": 1670434534,
+    "lastKnownWriteTime": 1670440251,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1670435372558,
+    "last_content_update": 1670440251552,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -22,6 +22,31 @@ library(cluster)
 library(factoextra)
 library(ade4)
 
-##importing datasets
+##importing dataset
 
-df1 <- read.csv('C:\Users\gabriel.conte\Documents\GitHub\countries_by_GNI_clustering\Datasets_CSV\df_1.csv')
+df <- read.csv('Datasets_CSV/Country-data.csv')
+
+##summarizing the dataset, the variables have different units of measure and range
+
+summary(df)
+
+#standardizing the variables
+
+stand_df <- as.data.frame(scale(df[,2:10]))
+
+#setting the correct names for the lines in the standardized df
+
+rownames(stand_df) <- df$country
+
+#the variables will have mean = 0 and sd = 1, that way the range and units of measure are in the same base
+
+round(mean(stand_df$exports),3)
+round(mean(stand_df$gdpp),3)
+
+round(sd(stand_df$exports),3)
+round(sd(stand_df$gdpp),3)
+
+
+
+
+
