@@ -82,7 +82,13 @@ analysis <- group_by(df, cluster_k) %>%
             life_expec = mean(life_expec, na.rm = TRUE),
             gdpp = mean(gdpp, na.rm = TRUE),
             total_fer = mean(total_fer, na.rm = TRUE))
-analysis  
+
+analysis %>% 
+  kable(row.names = T) %>% 
+  kable_styling(bootstrap_options = "striped",
+                full_width = FALSE,
+                font_size = 20)
+
 
 
 
