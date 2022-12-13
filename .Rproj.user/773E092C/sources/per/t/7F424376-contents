@@ -51,7 +51,7 @@ round(mean(stand_df$gdpp),3)
 round(sd(stand_df$exports),3)
 round(sd(stand_df$gdpp),3)
 
-##begining the clustering process - Method: k-means
+##beginning the clustering process - Method: k-means
 
 #using the elbow method to identify how many clusters we should use in this df
 
@@ -65,9 +65,44 @@ fviz_nbclust(stand_df[,1:9], kmeans, method = "wss")
 
 cluster_df <- kmeans(stand_df[,1:9], centers = 6)
 
-#creating the variable with the clusters in the dataset
+#creating the variable with the clusters in the datasets
 
 stand_df$cluster_k <- factor(cluster_df$cluster)
+df$cluster_k <- factor(cluster_df$cluster)
 
-#
+#analyzing using descriptive statistics
+
+analysis <- group_by(df, cluster_k) %>% 
+  summarise(child_mortality = mean(child_mort, na.rm = TRUE),
+            exports = mean(exports, na.rm = TRUE),
+            health = mean(health, na.rm = TRUE),
+            imports = mean(imports, na.rm = TRUE),
+            income = mean(income, na.rm = TRUE),
+            inflation = mean(inflation, na.rm = TRUE),
+            life_expec = mean(life_expec, na.rm = TRUE),
+            gdpp = mean(gdpp, na.rm = TRUE),
+            total_fer = mean(total_fer, na.rm = TRUE))
+
+analysis %>% 
+  kable(row.names = T) %>% 
+  kable_styling(bootstrap_options = "striped",
+                full_width = FALSE,
+                font_size = 20)
+
+#plotting gdpp x life expectancy
+
+ggplot(df) +
+  geom_point(aes(x = life_expec, y = gdpp, color = cluster_k))
+
+#checking witch variables were relevant to clusters creation using Anova
+
+summary(anova_child_mort <- aov(formula = child_mort ~ cluster_k,
+                                data = stand_df))
+
+
+
+
+
+
+
 

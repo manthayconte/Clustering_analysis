@@ -89,6 +89,20 @@ analysis %>%
                 full_width = FALSE,
                 font_size = 20)
 
+#plotting gdpp x life expectancy
+
+ggplot(df) +
+  geom_point(aes(x = life_expec, y = gdpp, color = cluster_k))
+
+#checking witch variables were relevant to clusters creation using Anova
+
+summary(anova_child_mort <- aov(formula = child_mort ~ cluster_k,
+                                data = stand_df))
+
+
+
+
+
 
 
 
