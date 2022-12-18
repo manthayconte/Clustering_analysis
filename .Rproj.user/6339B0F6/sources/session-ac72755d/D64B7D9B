@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/clustering_countries_by_development/Clustering.R",
     "project_path": "Clustering.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2759131821",
     "contents": "",
     "dirty": true,
     "created": 1671369822497.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "93,38",
-        "scrollLine": "77"
+        "cursorPosition": "92,0",
+        "scrollLine": "78"
     },
     "folds": "",
-    "lastKnownWriteTime": 1671304844,
+    "lastKnownWriteTime": 1671370887,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1671370794591,
+    "last_content_update": 1671372434432,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -11,6 +11,7 @@ install.packages("factoextra") #fviz-dend function for building dendrograms
 install.packages("ade4") #ade4 function for matrix of distances in binary var.
 install.packages("misc3d") #3D graphics
 install.packages("plot3D") #3D graphics
+install.packages("openxlsx") #used to export the dataset to a excel file
 
 ##loading necessary packages
 
@@ -25,11 +26,12 @@ library(factoextra)
 library(ade4)
 library(misc3d)
 library(plot3D)
+library(openxlsx)
 
 
 ##importing dataset
 
-df <- read.csv('Datasets_CSV/Country-data.csv')
+df <- read.csv('Datasets_files/Country-data.csv')
 
 ##summarizing the dataset, the variables have different units of measure and range
 
@@ -89,36 +91,7 @@ analysis %>%
                 full_width = FALSE,
                 font_size = 20)
 
-#plotting gdpp x life expectancy
+#exporting the dataset to a excel file
 
-ggplot(df) +
-  geom_point(aes(x = life_expec, y = gdpp, color = cluster_k))
+write.xlsx(df, 'Datasets_files/df_clusters.xlsx', colnames = TRUE)
 
-#checking witch variables were relevant to clusters creation using Anova
-
-summary(anova_child_mort <- aov(formula = child_mort ~ cluster_k,
-                                data = stand_df))
-
-summary(anova_exports <- aov(formula = exports ~ cluster_k,
-                                data = stand_df))
-
-summary(anova_health <- aov(formula = health ~ cluster_k,
-                             data = stand_df))
-
-summary(anova_imports <- aov(formula = imports ~ cluster_k,
-                             data = stand_df))
-
-summary(anova_income <- aov(formula = income ~ cluster_k,
-                             data = stand_df))
-
-summary(anova_inflation <- aov(formula = inflation ~ cluster_k,
-                             data = stand_df))
-
-summary(anova_life_exp <- aov(formula = life_expec ~ cluster_k,
-                             data = stand_df))
-
-summary(anova_gdpp <- aov(formula = gdpp ~ cluster_k,
-                             data = stand_df))
-
-##all variables were relevant to clusters creation, as the P value for all them
-##are > then 

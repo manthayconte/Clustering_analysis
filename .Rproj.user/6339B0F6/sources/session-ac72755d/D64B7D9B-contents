@@ -91,7 +91,11 @@ analysis %>%
                 full_width = FALSE,
                 font_size = 20)
 
+
 #exporting the dataset to a excel file
 
 write.xlsx(df, 'Datasets_files/df_clusters.xlsx', colnames = TRUE)
+
+#after this the analysis continues in Tableau:
+#https://public.tableau.com/app/profile/gabriel.conte
 
