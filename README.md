@@ -1,6 +1,6 @@
 # clustering_countries_by_development
 
-Basic analysis of a dataset acquired in kaggle using R for clustering and Tableu for visualization
+Basic analysis of a dataset acquired in kaggle using R for clustering and Tableau for visualization
 
 Dataset source: https://www.kaggle.com/datasets/rohan0301/unsupervised-learning-on-country-data
 
