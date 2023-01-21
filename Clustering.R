@@ -31,7 +31,7 @@ library(openxlsx)
 
 ##importing dataset
 
-df <- read.csv('Datasets_files/Country-data.csv')
+df <- read.csv('https://github.com/manthayconte/clustering_countries_by_development/blob/main/Datasets_files/Country-data.csv')
 
 ##summarizing the dataset, the variables have different units of measure and range
 
@@ -93,5 +93,5 @@ analysis %>%
 
 #exporting the dataset to a excel file
 
-write.xlsx(df, 'Datasets_files/df_clusters.xlsx', colnames = TRUE)
+write.xlsx(df, 'https://github.com/manthayconte/clustering_countries_by_development/blob/main/Datasets_files/df_clusters.xlsx', colnames = TRUE)
 
