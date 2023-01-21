@@ -1,4 +1,4 @@
-# clustering_countries_by_development
+# Clustering Analysis
 
 Basic analysis of a dataset acquired in kaggle using R for clustering and Tableau for visualization
 
