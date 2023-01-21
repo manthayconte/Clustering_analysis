@@ -1,0 +1,28 @@
+{
+    "id": "577E083A",
+    "path": "~/Documents/GitHub/clustering_countries_by_development/R_files/Clustering_analysis.Rmd",
+    "project_path": "Clustering_analysis.Rmd",
+    "type": "r_markdown",
+    "hash": "2740987448",
+    "contents": "",
+    "dirty": false,
+    "created": 1674307754116.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "37,17",
+        "scrollLine": "19",
+        "last_setup_crc32": "dabe2567d68c13fc"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1674308048,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1674308048733,
+    "read_only": false,
+    "read_only_alternatives": []
+}
